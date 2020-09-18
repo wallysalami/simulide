@@ -260,7 +260,7 @@ void IntCircuit::addPin(QString id, QString type, QString label, int pos, int xp
     Circuit::self()->compList()->removeOne( tunnel );
 
     tunnel->setParentItem( this );
-    tunnel->setAcceptedMouseButtons( false );
+    tunnel->setAcceptedMouseButtons( 0 );
     tunnel->setShowId( false );
     tunnel->setName( m_id+"-"+id ); // Make tunel name unique for this component
     tunnel->setPos( xpos, ypos );
