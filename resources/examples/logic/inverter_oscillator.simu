@@ -1,0 +1,67 @@
+<circuit type="simulide_0.4" reactStep="50" Simu_Step_nS="1000" noLinAcc="5" animate="0" Speed_per="100" Speed_sps="1000000">
+
+Unique  Id: Node-23: 
+Circuit Id: Node-23
+<item labelrot="0" labelx="-16" mainComp="false" y="-212" id="Node-23" itemtype="Node" valLabely="0" hflip="1" objectName="Node-23" valLabRot="0" Show_id="false" x="-108" vflip="1" rotation="0" valLabelx="0" labely="-24"/>
+
+Unique  Id: Oscope-7: 
+Circuit Id: Oscope-25
+<item objectName="Oscope-7" labely="-24" Trigger2="true" labelrot="0" y="-212" valLabely="0" Trigger1="true" hTick1="1" vPos1="0" Autoad2="true" Basic_X="120" Basic_Y="100" Probe2="" vTick1="1" hflip="1" vflip="1" Expand="false" Probe1="" vPos2="0" x="44" valLabelx="0" Data_Size="200" vTick2="1" hTick2="1" Filter="0.29999999999999999" labelx="-16" itemtype="Oscope" valLabRot="0" rotation="0" id="Oscope-25" Expand_Y="200" Expand_X="240" mainComp="false" Show_id="false" Autoad1="true"/>
+
+Unique  Id: Node-6: 
+Circuit Id: Node-10
+<item labelrot="0" labelx="0" mainComp="false" y="-172" id="Node-10" itemtype="Node" valLabely="0" hflip="1" objectName="Node-6" valLabRot="0" Show_id="false" x="-212" vflip="1" rotation="0" valLabelx="0" labely="-24"/>
+
+Unique  Id: Potentiometer-5: 
+Circuit Id: Frequency
+<item objectName="Potentiometer-5" labely="-42" labelrot="0" y="-268" valLabely="-20" Resistance="100" Value_Ohm="52500" hflip="1" vflip="1" x="-212" valLabelx="-56" Unit=" kΩ" labelx="-26" itemtype="Potentiometer" valLabRot="0" rotation="0" id="Frequency" Show_res="true" mainComp="false" Show_id="true"/>
+
+Unique  Id: Resistor-4: 
+Circuit Id: Resistor-8
+<item objectName="Resistor-4" labely="-24" labelrot="0" y="-212" valLabely="-20" Resistance="100" hflip="1" vflip="1" x="-148" valLabelx="-12" Unit=" Ω" labelx="0" itemtype="Resistor" valLabRot="0" rotation="0" id="Resistor-8" Show_res="true" mainComp="false" Show_id="false"/>
+
+Unique  Id: Buffer-3: 
+Circuit Id: Buffer-7
+<item objectName="Buffer-3" labely="-24" labelrot="0" y="-172" Input_Imped="1e+20" Inverted="true" valLabely="0" Out_Low_V="0" Input_Low_V="2" Out_Imped="50" hflip="1" vflip="1" Open_Collector="false" x="-156" valLabelx="0" Tristate="false" Input_High_V="3" Out_High_V="5" labelx="0" itemtype="Buffer" valLabRot="0" rotation="0" id="Buffer-7" mainComp="false" Show_id="false"/>
+
+Unique  Id: Capacitor-2: 
+Circuit Id: Capacitor-6
+<item objectName="Capacitor-2" labely="-24" labelrot="-90" y="-140" valLabely="6" Show_Cap="true" Capacitance="99.999999999999943" hflip="1" vflip="1" x="-212" valLabelx="-16" Unit=" nF" labelx="0" itemtype="Capacitor" valLabRot="0" rotation="90" id="Capacitor-6" mainComp="false" Show_id="false"/>
+
+Unique  Id: Ground (0 V)-1: 
+Circuit Id: Ground (0 V)-5
+<item labelrot="0" labelx="0" mainComp="false" y="-92" id="Ground (0 V)-5" itemtype="Ground" valLabely="0" hflip="1" objectName="Ground (0 V)-1" valLabRot="0" Show_id="false" x="-212" vflip="1" rotation="0" valLabelx="0" labely="-24"/>
+
+Unique  Id: Connector-9: 
+Circuit Id: Connector-11
+<item objectName="Connector-9" labely="-24" labelrot="0" y="-108" valLabely="0" pointList="-212,-108,-212,-124" hflip="1" vflip="1" x="-212" valLabelx="0" enodeid="Circ_eNode-10" startpinid="Ground (0 V)-1-Gnd" endpinid="Capacitor-2-rPin" labelx="0" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-11" mainComp="false" Show_id="false"/>
+
+Unique  Id: Connector-11: 
+Circuit Id: Connector-13
+<item objectName="Connector-11" labely="-24" labelrot="0" y="-156" valLabely="0" pointList="-212,-156,-212,-172" hflip="1" vflip="1" x="-212" valLabelx="0" enodeid="Circ_eNode-12" startpinid="Capacitor-2-lPin" endpinid="Node-6-0" labelx="0" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-13" mainComp="false" Show_id="false"/>
+
+Unique  Id: Connector-13: 
+Circuit Id: Connector-15
+<item objectName="Connector-13" labely="-24" labelrot="0" y="-268" valLabely="0" pointList="-196,-268,-180,-268,-180,-212,-164,-212" hflip="1" vflip="1" x="-196" valLabelx="0" enodeid="Circ_eNode-14" startpinid="Potentiometer-5-PinB" endpinid="Resistor-4-lPin" labelx="0" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-15" mainComp="false" Show_id="false"/>
+
+Unique  Id: Connector-15: 
+Circuit Id: Connector-17
+<item objectName="Connector-15" labely="-24" labelrot="0" y="-252" valLabely="0" pointList="-212,-252,-212,-172" hflip="1" vflip="1" x="-212" valLabelx="0" enodeid="Circ_eNode-12" startpinid="Potentiometer-5-PinM" endpinid="Node-6-1" labelx="0" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-17" mainComp="false" Show_id="false"/>
+
+Unique  Id: Connector-20: 
+Circuit Id: Connector-22
+<item objectName="Connector-20" labely="-24" labelrot="0" y="-172" valLabely="0" pointList="-212,-172,-172,-172" hflip="1" vflip="1" x="-212" valLabelx="0" enodeid="Circ_eNode-12" startpinid="Node-6-2" endpinid="Buffer-3-in0" labelx="-16" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-22" mainComp="false" Show_id="false"/>
+
+Unique  Id: Connector-16: 
+Circuit Id: Connector-16
+<item objectName="Connector-16" labely="-24" labelrot="0" y="-172" valLabely="0" pointList="-140,-172,-108,-172,-108,-212" hflip="1" vflip="1" x="-140" valLabelx="0" enodeid="enode-25" startpinid="Buffer-3-out" endpinid="Node-23-0" labelx="-16" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-16" mainComp="false" Show_id="false"/>
+
+Unique  Id: Connector-24: 
+Circuit Id: Connector-24
+<item objectName="Connector-24" labely="-24" labelrot="0" y="-212" valLabely="0" pointList="-108,-212,-132,-212" hflip="1" vflip="1" x="-108" valLabelx="0" enodeid="enode-25" startpinid="Node-23-2" endpinid="Resistor-4-rPin" labelx="-16" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-24" mainComp="false" Show_id="false"/>
+
+Unique  Id: Connector-25: 
+Circuit Id: Connector-25
+<item objectName="Connector-25" labely="-24" labelrot="0" y="-212" valLabely="0" pointList="-108,-212,-44,-212" hflip="1" vflip="1" x="-108" valLabelx="0" enodeid="enode-25" startpinid="Node-23-1" endpinid="Oscope-7-Pin0" labelx="-16" itemtype="Connector" valLabRot="0" rotation="0" id="Connector-25" mainComp="false" Show_id="false"/>
+ 
+</circuit>

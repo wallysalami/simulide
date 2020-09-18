@@ -1,0 +1,163 @@
+
+simulide 0.4.14
+
+Changes:
+  RC2:
+    - Full Adder: change to horizontal configuration.
+    - Adder, Counter, FlipFlops: smaller size.
+    - Properties Tab removed, now right-click->Properties opens new window.
+    
+  RC4:
+    - Updated About SimulIDE Dialog.
+    - Old Relays not supported (save circuit with 0.4.13).
+    
+  Final:
+    - Delete key working again to remove Components.
+    - RamTabe Tab removed (open Ramtable in MCU).
+  
+New Features:
+  RC1:
+    - Mcu Logic Symbol enabled.
+    - Some AVR Logic Symbols (Sergey Roenko)
+    - Mcu Help Files enabled.
+    - Some AVR Help files (Sergey Roenko)
+    - Gui French translation (Pascal Cotret)
+    - Change Language: Circuit->Properties.
+  
+  RC2:
+    - Debugger: Show number of Clock Cycles for each Debug Step.
+    - AVR: Allow AVR GPRs R0-R31 names in Ramtable.
+    - RamTable: show Status Reg. bits and PC.
+    - Flipflops: Trigger property (None, Clock, InEnable).
+    - Gui German translation (Tim Fischer).
+    - Circuit Speed label: float with 2 decimals.
+    - New Oscope: basic + advanced modes.
+  
+  RC3:
+    - New Plotter and Oscilloscope unified Component.
+    - Recently used Circuits.
+    - Recently used Editor files.
+    - Search Components in Component List.
+    - Esc Key to cancel New wire.
+    - Open .simu file by command line: "simulide circ.simu" (or double-click).
+    - Set Simulation speed by steps per second or percentage.
+    - Set Simulation step (nanoseconds).
+    - Gui Brazilian Portuguese Translation ( Maico Smaniotto ).
+    
+  RC4:
+    - New Subcircuits with graphical Components capabilities (Boards).
+    - Several AVR Logic Symbol Packages (Sergey Roenko).
+    - Several AVR help files (Sergey Roenko).
+    
+  Final:
+    - Make RamTable persistent.
+    - Unique Ramtable as window for each MCU.
+    - OpAmp: Properties for positive and negative power voltages.
+    - Remove all limitations to simulation speed (before limited to 1 GHz).
+    - Editor: Accept dropping files.
+  
+Bug Fixes:
+  RC1:
+    - Mosfet animation not updating after Power-Off.
+    - Editor: SaveAs should take current file instead of last file.
+    - Editor: SaveAs+Modify+Compile takes old fileName.
+    - Crash Setting values < 1 pico
+    - Passive Components: should not accept value = 0.
+    - Atmega32u4: Pwm not working.
+    - Atmega32u4: Duplicated Pin D4. (Sergey Roenko)
+    - Atmega64: Wrong Pin20, should be reset. (Sergey Roenko)
+    - Mcu eeprom: error loading data files.
+    - Pic mcu: error reading opencollector pins as input.
+  
+  RC2:
+    - Atmega32u4: Fast PWM on pin OC1C doesn't work for timer 1.
+    - Audio Output: cracking sounds.
+    - Volt. Regulator not working in some cases.
+    - PIC16F505 wrong package.
+    - Counter not working in Subcircuits.
+    - Crash deleting a subcircuit that fails to load .subcircuit file.
+    - Gates sometimes fail to restart after power-off (inverter oscillator example).
+    - SubPackage->LoadPackage fails to set proper default path in some cases.
+    - Logic Devices: Input HighV & LowV not working in Subcircuits.
+    - Windows can only reach 80% simulation speed.
+    - Windows cancel wire by right-click shows context menu.
+    - Drag & drop files not working in windows.
+    - Editor: some grammatical errors.
+    - Frequencimeter: Wrong value at Circuit speed > 1 MHz.
+    - Plotter not showing small signals properly ( < 0.1 V ).
+    - Mcu: Setting Pin direction can miss previous Pin state.
+    - Mcu: Pullups not working depending on Pin direction set order.
+    - BcdToDec not working in subcircuits.
+    - Editor: asm type not recognized after modify and save.
+    
+  RC3:
+    - Clock & WaveGen: Wrong frequency after circuit speed change > 1 MHz while running.
+    - New Circuit when Simulation is paused => Power button dissabled.
+    - Serial Monitor not properly deleted.
+    - Remove waveGen max frequency limit.
+    - AVR Adc not working for channels > 8.
+    - Avr asm Copmiler: error in mega16 & mega 32 .inc files.
+    - Arduino Uno should have a buffer lo drive builtin led.
+    - Debugger broken ( 0.4.14-RC2 ).
+    - Locale variants not working (eg. pt_BR).
+    - AVR i2c not working properly.
+    
+  RC4:
+    - Drag&Drop files not working as it should (item created at Drag enter).
+    - Crash: Arduino Uno led buffer not properly removed (0.4.14-RC3).
+    - LedMatrix not cleanly removed.
+    - Properties & Serial Monitor Windows always on top.
+    - Not possible to set simulation steps < 1 nS.
+    - RamTable: some PIC status bits names don't fit.
+    - Missing files: TC4560, TC4561 (Sergey Roenko).
+    - 74HC148 not working properly (Sergey Roenko).
+    - Mcu pins not properly initializated in some cases (0.4.14-RC2).
+    - Weird bug in examples/pic/glcd8544_p18f2550 (0.4.14-RC2).
+    - Pressing delete key while editing values removes oscope.
+    - Pausing simulation and click on oscope clears oscope screen.
+    - Fix Windows version number.
+    
+  Final:
+    - Oscope DC input: not shown until volt change.
+    - Oscope: Wrong central axis subdivisions for X sizes not multiple of 50.
+    - Text Component: Deleteº Key not working.
+    - Random Crash removing grounded Leds (0.4.14-RC4).
+    - PIC Comparator: Output Vref to Pin doesn't work.
+    - Image Component: Animated Gifs not working.
+    - RamTable: Load varset brokes RamTable (addr = 0).
+    - Pic Uart sends extra character after reset (0.4.13.RC2).
+    - AVR spi not synched to mcu clock in some cases (asteroid game).
+    - Changing Simulation Speed (Steps Per Sec.) should change step size if speed% results >100%.
+    - Editor: Set Compiler Path for unsaved or unsupported files should show an info dialog.
+    - Crash dropping files to circuit in some cases.
+    - Tunnel: wrong icon (0.4.14-RC4).
+  
+New Components:
+  RC1:
+    - Dc Motor.
+    - Variable Resistor.
+    - LDR.
+    - Termistor (NTC).
+    - Atmega32m1, Atmega64m1.
+
+  RC2:
+    - IC74 (Sergey Roenko)
+        74C925, 74C926, 74C927, 74HC51, 74HC594, 74HC597, 74HC4016, 74LS54, 74XX45, 
+        74XX46, 74XX48, 74XX49, 74XX54, 74XX55, 74XX56, 74XX57, 74XX64, 74XX65, 
+        74XX68, 74XX69, 74XX70, 74XX72, 74XX82, 74XX83, 74XX114, 74XX141, 74XX145, 
+        74XX156, 74XX159, 74XX168, 74XX169, 74XX171, 74XX180, 74XX240, 74XX242, 
+        74XX243, 74XX244, 74XX246, 74XX248, 74XX249, 74XX276, 74XX280, 74XX295, 
+        74XX299, 74XX323, 74XX365, 74XX366, 74XX367, 74XX368, 74XX376, 74XX378, 
+        74XX379, 74XX395, 74XX540, 74XX541, 74XX591, 74XX682, 74XX684.
+      
+    - ICCD (Sergey Roenko)
+        CD4085, CD4502, CD4503, CD4522, CD4526, CD4539, MC14495, MM74C922, MM74C923, 
+        TC4467, TC4468, TC4469.
+      
+    - Keys (Sergey Roenko)
+        L293.
+      
+  RC4:
+    - Tunnel.
+    
+    
