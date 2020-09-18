@@ -1,0 +1,4 @@
+build_XX/build/*
+build_XX/executables/*
+build_XX/*.cpp
+Makefile
