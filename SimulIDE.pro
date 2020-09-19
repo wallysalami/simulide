@@ -196,6 +196,7 @@ macx {
     
     LIBS += /usr/local/lib/libelf.a
     QMAKE_LFLAGS += -no-pie
+    ICON = ../src/icons/simulide.icns
 }
 
 CONFIG += qt 
