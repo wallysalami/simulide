@@ -1030,7 +1030,7 @@ void Circuit::keyPressEvent( QKeyEvent* event )
         else if( key == Qt::Key_O ) CircuitWidget::self()->openCirc();
         else QGraphicsScene::keyPressEvent( event );
     }
-    else if( key == Qt::Key_Delete )
+    else if( key == Qt::Key_Delete || key == Qt::Key_Backspace )
     {
         removeItems();
         QGraphicsScene::keyPressEvent( event );
