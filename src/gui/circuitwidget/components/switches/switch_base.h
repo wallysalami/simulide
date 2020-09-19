@@ -42,7 +42,7 @@ class MAINMODULE_EXPORT SwitchBase : public MechContact
         QString key();
         void setKey( QString key );
         
-        QPushButton* button() { return m_button; }
+        QToolButton* button() { return m_button; }
 
     public slots:
         virtual void onbuttonclicked();
@@ -53,7 +53,7 @@ class MAINMODULE_EXPORT SwitchBase : public MechContact
 
         QString m_key;
         
-        QPushButton*          m_button;
+        QToolButton*          m_button;
         QGraphicsProxyWidget* m_proxy;
 };
 

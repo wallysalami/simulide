@@ -70,7 +70,7 @@ LogicInput::LogicInput( QObject* parent, QString type, QString id )
     setValLabelPos(-16, 8 , 0 ); // x, y, rot 
     setShowVal( true );
 
-    m_button = new QPushButton( );
+    m_button = new QToolButton( );
     m_button->setMaximumSize( 16,16 );
     m_button->setGeometry(-20,-16,16,16);
     m_button->setCheckable( true );
