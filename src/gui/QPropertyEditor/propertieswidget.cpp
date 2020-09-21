@@ -24,7 +24,7 @@
 PropertiesWidget::PropertiesWidget( QWidget* parent )
                 : QWidget( parent )
 {
-    setWindowFlags( Qt::Window | Qt::WindowTitleHint
+    setWindowFlags( Qt::Window | Qt::WindowTitleHint | Qt::Tool
                   | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint );
 
     createWidgets();

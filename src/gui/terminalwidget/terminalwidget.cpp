@@ -46,7 +46,7 @@ TerminalWidget::TerminalWidget( QWidget* parent, SerialTerm* ser )
     
     setMinimumSize( QSize(200, 200) );
 
-    setWindowFlags( Qt::Window | Qt::WindowTitleHint
+    setWindowFlags( Qt::Window | Qt::WindowTitleHint | Qt::Tool
                   | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint );
     
     m_verticalLayout.setObjectName( "verticalLayout" );

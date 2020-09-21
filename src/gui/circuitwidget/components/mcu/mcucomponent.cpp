@@ -80,7 +80,7 @@ McuComponent::McuComponent( QObject* parent, QString type, QString id )
     m_ramTabWidgetLayout->setContentsMargins(0, 0, 0, 0);
     m_ramTabWidgetLayout->setObjectName( "ramTabWidgetLayout" );
     m_ramTabWidget->setWindowFlags( Qt::Window | Qt::WindowTitleHint
-            | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint );
+            | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint | Qt::Tool );
     m_ramTabWidget->hide();
 
     m_ramTableCreated = false;
