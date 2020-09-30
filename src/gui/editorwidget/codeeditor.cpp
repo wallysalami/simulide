@@ -81,7 +81,7 @@ CodeEditor::CodeEditor( QWidget* parent, OutPanelText* outPane )
 
     m_help = "";
     
-    m_font.setFamily("Monospace");
+    m_font = QFontDatabase::systemFont(QFontDatabase::FixedFont);
     m_font.setFixedPitch( true );
     m_font.setPixelSize( m_fontSize );
     setFont( m_font );
