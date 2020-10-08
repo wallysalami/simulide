@@ -231,6 +231,11 @@ win32 | linux {
         $(MOVE)     ../resources/translations/*.qm $$TARGET_PREFIX/share/simulide/translations ;
 }
 macx {
+    QMAKE_CC = gcc-10
+    QMAKE_CXX = g++-10
+    QMAKE_LINK = g++-10
+    QMAKE_CXXFLAGS -= -stdlib=libc++
+    QMAKE_LFLAGS -= -stdlib=libc++
     DESTDIR = $$TARGET_PREFIX 
     mkpath( $$TARGET_PREFIX/simulide.app )
     copy2dest.commands = \
