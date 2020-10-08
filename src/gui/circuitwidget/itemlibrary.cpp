@@ -62,6 +62,7 @@
 #include "intcircuit.h"
 #include "keypad.h"
 #include "ks0108.h"
+#include "ky023.h"
 #include "ky040.h"
 #include "latchd.h"
 #include "ldr.h"
@@ -186,6 +187,7 @@ void ItemLibrary::loadItems()
     addItem( Arduino::libraryItem() );
     addItem( new LibraryItem( tr("Sensors"),tr("Micro"), "1to2.png","", 0l ) );
     addItem( SR04::libraryItem() );
+    addItem( KY023::libraryItem() );
     addItem( KY040::libraryItem() );
     addItem( SerialPort::libraryItem() );
     addItem( SerialTerm::libraryItem() );
