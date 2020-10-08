@@ -344,7 +344,7 @@ bool CircMatrix::luSolve( int n, int group )
         double volt = tot/a[i][i];
         b[i] = volt;
         
-        if( std::isnan( volt ) )
+        if( isnan( volt ) )
         {
             isOk = false;
             volt = 0;
