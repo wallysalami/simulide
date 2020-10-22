@@ -205,7 +205,12 @@ void Circuit::loadCircuit( QString fileName )
         remove();
         for( Component* comp : m_compList ) removeComp( comp ); // Clean Nodes
     }
-    else m_graphicView->centerOn( QPointF( 1200+itemsBoundingRect().center().x(), 950+itemsBoundingRect().center().y() ) );
+    else m_graphicView->centerOn(
+        QPointF(
+            width()/2 + itemsBoundingRect().center().x() - m_graphicView->width()/2,
+            height()/2 + itemsBoundingRect().center().y() - m_graphicView->height()/2
+        )
+    );
     
     if( MainWindow::self()->autoBck() )
     {
