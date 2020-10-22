@@ -58,6 +58,7 @@
 #include "image.h"
 #include "i2cram.h"
 #include "i2ctoparallel.h"
+#include "ili9341.h"
 #include "inductor.h"
 #include "intcircuit.h"
 #include "keypad.h"
@@ -189,6 +190,7 @@ void ItemLibrary::loadItems()
     addItem( SR04::libraryItem() );
     addItem( KY023::libraryItem() );
     addItem( KY040::libraryItem() );
+    addItem( Ili9341::libraryItem() );
     addItem( SerialPort::libraryItem() );
     addItem( SerialTerm::libraryItem() );
     // Logic
