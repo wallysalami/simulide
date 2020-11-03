@@ -67,31 +67,26 @@ TerminalWidget::TerminalWidget( QWidget* parent, SerialTerm* ser )
 
     m_ascciButton.setCheckable(true);
     m_ascciButton.setForegroundRole( QPalette::BrightText );
-    m_ascciButton.setFixedSize( 50, 20 );
     m_ascciButton.setText( " ASCII " );
     m_ascciButton.setChecked( m_printASCII );
 
     m_valueButton.setCheckable(true);
     m_valueButton.setForegroundRole( QPalette::BrightText );
-    m_valueButton.setFixedSize( 50, 20 );
     m_valueButton.setText( tr(" Value ") );
     m_valueButton.setChecked( !m_printASCII );
 
     m_addCrButton.setCheckable(true);
     m_addCrButton.setForegroundRole( QPalette::BrightText );
-    m_addCrButton.setFixedSize( 30, 20 );
     m_addCrButton.setText( tr("CR") );
     m_addCrButton.setChecked( false );
 
     //m_clearInButton.setCheckable(true);
     m_clearInButton.setForegroundRole( QPalette::BrightText );
-    m_clearInButton.setFixedSize( 50, 20 );
     m_clearInButton.setText( tr("Clear") );
     m_clearInButton.setChecked( false );
 
     //m_clearOutButton.setCheckable(true);
     m_clearOutButton.setForegroundRole( QPalette::BrightText );
-    m_clearOutButton.setFixedSize( 50, 20 );
     m_clearOutButton.setText( tr("Clear") );
     m_clearOutButton.setChecked( false );
 
@@ -119,15 +114,18 @@ TerminalWidget::TerminalWidget( QWidget* parent, SerialTerm* ser )
     m_verticalLayout.addWidget( myFrame );*/
     
     QHBoxLayout* textLabelsLayoutI = new QHBoxLayout();
+    QSpacerItem *spacer = new QSpacerItem(1,1, QSizePolicy::Expanding, QSizePolicy::Fixed);
     QLabel* sentLabel = new QLabel(this);
     sentLabel->setText(tr("Received From Micro:"));
     textLabelsLayoutI->addWidget( &m_clearOutButton );
+    textLabelsLayoutI->addSpacerItem( spacer );
     textLabelsLayoutI->addWidget( sentLabel );
 
     QHBoxLayout* textLabelsLayoutO = new QHBoxLayout();
     QLabel* recvLabel = new QLabel(this);
     recvLabel->setText(tr("Sent to Micro:"));
     textLabelsLayoutO->addWidget( &m_clearInButton );
+    textLabelsLayoutO->addSpacerItem( spacer );
     textLabelsLayoutO->addWidget( recvLabel );
     textLabelsLayoutO->addWidget( &m_uartBox );
 
